@@ -7,8 +7,13 @@
 !/jobs
 !/.gitignore
 !/*.xml
+#ignore files jenkins
 !*.yaml
 !*.yml
+!/jenkins_home
+jenkins_home/*
+jenkins_home/config.xml
+
 
 #ignore all files in jobs subdirectories except for folders
 #note: git doesn't track folders, only file content
@@ -19,7 +24,8 @@ jobs/**
 #!jobs/**/nextBuildNumber
 
 #exclude only config.xml files in repository subdirectories
-!config.xml
+#!config.xml
+!.gitkeep
 
 #don't track workspaces (when users build on the master)
 jobs/**/*workspace
